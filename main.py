@@ -2,6 +2,7 @@ import speech_recognition as sr
 import os 
 import webbrowser
 import openai
+import datetime
 
 def say(text) :
     os.system(f"say {text}")
@@ -35,4 +36,14 @@ while True :
         if f"Open {site[0]}".lower() in query.lower() :
             say(f"Opening {site[0]} Sourya Sir...")
             webbrowser.open(site[1])
+    
+    if "the time" in query :
+        strf_time = datetime.datetime.now().strftime("%H:%M:%S")
+        say(f"Souryaa Sir, the time is {strf_time}")
+    
+    # this code will help in opening applications inside the computers
+    if "play Perfect song" in query :
+        musicPath = "/Users/souryagupta/Downloads/Perfect-(Mr-Jat.in).mp3"
+        os.system(f"open '{musicPath}'")
+
     # say(query)
