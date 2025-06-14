@@ -1,0 +1,1 @@
+'spotify', 'https://open.spotify.com/'
