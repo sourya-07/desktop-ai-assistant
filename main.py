@@ -12,7 +12,7 @@ def say(text) :
 def take_command() :
     r = sr.Recognizer()
     with sr.Microphone() as source :
-        r.pause_threshold = 1
+        r.pause_threshold = 0.5
         audio = r.listen(source)
         try :
             # print("Recognizing")
